@@ -73,3 +73,17 @@ crashlytics-build.properties
 .vsconfig
 .idea
 .vs
+
+# Loại bỏ các file dylib và so
+*.dylib
+*.so
+
+# Loại bỏ các file lớn hơn 50MB
+*.[Oo]bj
+*.[Ll]ib
+*.[Aa]rchive
+*.[Uu]nity[Pp]ackage
+*.[Pp]db
+*.[Mm]db
+*.[Ss]o
+*.[Dd]ll
