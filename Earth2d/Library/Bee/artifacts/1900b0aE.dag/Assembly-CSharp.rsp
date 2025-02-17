@@ -472,11 +472,13 @@
 "Assets/Scripts/EnergyEnemy.cs"
 "Assets/Scripts/Explosion.cs"
 "Assets/Scripts/ExplosionEnemy.cs"
+"Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Gun.cs"
 "Assets/Scripts/HealEnemy.cs"
 "Assets/Scripts/MiniEnemy.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/PlayerBullet.cs"
+"Assets/Scripts/PlayerCollision.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 /deterministic

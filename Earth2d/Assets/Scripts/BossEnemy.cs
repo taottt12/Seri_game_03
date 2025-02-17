@@ -7,7 +7,8 @@ public class BossEnemy : Enemy
     [SerializeField] private float speedBulletShot = 15f;
     [SerializeField] private float speedCircularSpreadShot = 10f;
     [SerializeField] private float hpValue = 50f;
-    [SerializeField] GameObject miniEnemyPrefabs;
+    [SerializeField] private GameObject miniEnemyPrefabs;
+    [SerializeField] private GameObject usbPrefabs;
     [SerializeField] private float skilCoolDown = 3f;
     private float nextSkillTime = 3f;
 
@@ -16,6 +17,11 @@ public class BossEnemy : Enemy
         if(Time.time >= nextSkillTime){
             UseSkill();
         }
+    }
+
+    protected override void Die(){
+        Instantiate(usbPrefabs, transform.position, Quaternion.identity);
+        base.Die();
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
