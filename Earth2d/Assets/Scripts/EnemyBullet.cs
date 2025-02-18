@@ -18,4 +18,10 @@ public class EnemyBullet : MonoBehaviour
     public void SetMovementDirection(Vector3 direction){
         movementDirection = direction;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision){
+        if(collision.CompareTag("Rock")){
+            Destroy(gameObject);
+        }
+    }
 }

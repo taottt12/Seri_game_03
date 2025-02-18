@@ -4,7 +4,7 @@ public class PlayerBullet : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 25f;
     [SerializeField] private float timeDestroy = 1f;
-    [SerializeField] private float damege = 10f;
+    [SerializeField] private float damege = 50f;
     [SerializeField] GameObject bloodPrefabs;
     void Start()
     {

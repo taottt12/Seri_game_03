@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] protected float maxHp = 150f;
     [SerializeField] protected Image hpBar;
+    [SerializeField] private GameManager gameManager;
     protected float currentHp;
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
@@ -24,6 +25,9 @@ public class Player : MonoBehaviour
     void Update()
     {
         Movement();
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            gameManager.PauseGameMenu();
+        }
     }
 
     void Movement(){
@@ -60,7 +64,7 @@ public class Player : MonoBehaviour
         }
     }
     public void Die(){
-        Destroy(gameObject);
+        gameManager.GameOverMenu();
     }
 
     private void UpdateHpBar(){
